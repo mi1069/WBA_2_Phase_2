@@ -5,6 +5,8 @@ Phase 2
 ============
 Gruppenmitglieder: 
 Nazan Aysune und Ushpal Mann
+
+ProjektIdee
 ============
 In den zweiten Phase der Veranstaltung WBA2 haben wir uns Gedanken darüber gemacht, welches Szenario als verteiltes System dargestellt werden kann. 
 Unsere erste Idee war es ein Zweipersonen-Strategiespiel zu erstellen (Tic Tac Toe). Dieses wurde uns von den Mentoren abgeraten, weil es nicht komplex genug ist. 
