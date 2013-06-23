@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/FahrradVerleih"
+	xmlns:tns="http://www.example.org/FahrradVerleih" attributeFormDefault="unqualified"
+	elementFormDefault="qualified">
+
+
+	<!-- Börse "Kollektion -->
+	<element name="collection">
+		<complexType>
+			<sequence>
+				<element name="users" type="tns:users_type"></element>
+				<element name="fahrraeder" type="tns:fahrraeder_type"></element>
+			</sequence>
+		</complexType>
+	</element>
+
+
+	<!-- Users -->
+	<complexType name="users_type">
+		<sequence>
+			<element name="user" type="tns:user_type" maxOccurs="unbounded"></element>
+		</sequence>
+	</complexType>
+
+	<!-- User Daten -->
+	<complexType name="user_type">
+		<sequence>
+			<element name="name" type="string"></element>
+			<element name="vorname" type="string"></element>
+			<element name="passwort" type="string"></element>
+			<element name="strasse" type="string"></element>
+			<element name="hausNr" type="integer"></element>
+			<element name="plz" type="integer"></element>
+			<element name="ort" type="string"></element>
+		</sequence>
+		<attribute name="id" type="integer" use="required"></attribute>
+	</complexType>
+
+
+
+	<!-- fahrraeder Kollektion -->
+	<complexType name="fahrraeder_type">
+		<sequence>
+			<element name="fahrrad" type="tns:fahrrad_type" maxOccurs="unbounded"></element>
+		</sequence>
+	</complexType>
+
+
+
+	<!-- Fahrrad Daten -->
+	<complexType name="fahrrad_type">
+		<sequence>
+			<element name="bild" type="anyURI"></element>
+			<element name="standort" type="tns:koord_type"></element>
+			<element name="hersteller" type="string"></element>
+			<element name="rahmenNr" type="integer"></element>
+			<element name="model" type="tns:model_type"></element>
+			<element name ="vergebenAn" type="tns:vergebenAn_type"></element>
+			<element name="ausleih" type="tns:ausleih_type"></element>
+		</sequence>
+		<attribute name="id" type="integer" use="required"></attribute>
+		<attribute name="BesitzerID" type="integer" use="required" />
+		<attribute name="preis" type="float"></attribute>
+	</complexType>
+
+
+	<complexType name="vergebenAn_type">
+		<attribute name="id" type="integer"></attribute>
+	</complexType>
+
+	<!-- Fahrrad Modelle -->
+	<simpleType name="model_type">
+		<restriction base="string">
+			<enumeration value="Mountainbike" />
+			<enumeration value="Rennraeder" />
+			<enumeration value="BMX" />
+			<enumeration value="Citybike" />
+			<enumeration value="KinderFahrraeder" />
+		</restriction>
+	</simpleType>
+
+
+	<!-- Standort and rueckgabeort Koordinaten -->
+	<simpleType name="koord_type">
+		<restriction base="string">
+			<pattern
+				value="-?([0-9]|[1-9][0-9]|1[0-7][0-9]).[0-9]{4,6},-?([0-9]|[1-9][0-9]|[1-2][0-9][0-9]|3[0-5][0-9]).[0-9]{4,6}" />
+		</restriction>
+	</simpleType>
+
+
+	<!-- Ausleih Infomation -->
+	<complexType name="ausleih_type">
+		<sequence>
+			<element name="rueckgabeort" type="tns:koord_type"></element>
+			<element name="mietBeginn" type="dateTime"></element>
+			<element name="mietEnde" type="dateTime"></element>
+		</sequence>
+	</complexType>
+</schema>

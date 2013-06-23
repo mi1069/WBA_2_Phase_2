@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<collection xmlns="http://www.example.org/FahrradVerleih">
+    <users>
+        <user id="1">
+            <name>zuckerberg</name>
+            <vorname>mark</vorname>
+            <passwort>smackdoesntwork</passwort>
+            <strasse>irgendwo</strasse>
+            <hausNr>5</hausNr>
+            <plz>267</plz>
+            <ort>london</ort>
+        </user>
+        <user id="2">
+            <name>mann</name>
+            <vorname>ushpal</vorname>
+            <passwort>dkhzfk</passwort>
+            <strasse> newStreet</strasse>
+            <hausNr>5</hausNr>
+            <plz>8924</plz>
+            <ort>cologne</ort>
+        </user>
+        <user id="3">
+            <name>Asyune</name>
+            <passwort>79372</passwort>
+            <strasse>streetGm</strasse>
+            <hausNr>8</hausNr>
+            <plz>11284</plz>
+            <ort>GM</ort>
+        </user>
+        <user id="4">
+            <name>heyhey</name>
+            <passwort>stilldontknow</passwort>
+            <strasse>nowandthen</strasse>
+            <hausNr>7</hausNr>
+            <plz>767</plz>
+            <ort>same</ort>
+        </user>
+        <user id="5">
+            <name>Mann</name>
+            <passwort>fhjfjh</passwort>
+            <strasse>MauMau</strasse>
+            <hausNr>8</hausNr>
+            <plz>688</plz>
+            <ort>cologne</ort>
+        </user>
+    </users>
+    <fahrraeder>
+        <fahrrad id="100" BesitzerID="1" preis="2.0">
+            <bild>http://tempuri.org</bild>
+            <standort>50.513427,138.105444</standort>
+            <hersteller>BMW</hersteller>
+            <rahmenNr>1234</rahmenNr>
+            <model>Mountainbike</model>
+            <vergebenAn id="4"/>
+            <ausleih>
+                <rueckgabeort>tns:rueckgabeort</rueckgabeort>
+                <mietBeginn>2001-12-31T12:00:00</mietBeginn>
+                <mietEnde>2001-12-31T12:00:00</mietEnde>
+            </ausleih>
+        </fahrrad>
+        <fahrrad id="101" BesitzerID="1" preis="5.0">
+            <bild>http://tempuri.org</bild>
+            <standort>50.513427,138.105555</standort>
+            <hersteller>hersteller</hersteller>
+            <rahmenNr>5678</rahmenNr>
+            <model>Citybike</model>
+        </fahrrad>
+        <fahrrad id="102" BesitzerID="2" preis="5.0">
+            <bild>http://tempuri.org</bild>
+            <standort>50.513427,138.105555</standort>
+            <hersteller>CDATA</hersteller>
+            <rahmenNr>5432</rahmenNr>
+            <model>BMX</model>
+            <vergebenAn id="3"/>
+            <ausleih/>
+        </fahrrad>
+        <fahrrad id="103" BesitzerID="2" preis="6.0">
+            <bild>http://tempuri.org</bild>
+            <standort>50.513427,138.105555</standort>
+            <hersteller>hersteller</hersteller>
+            <rahmenNr>5787</rahmenNr>
+            <model>Citybike</model>
+        </fahrrad>
+        <fahrrad id="104" BesitzerID="3" preis="3.0">
+            <bild>http://tempuri.org</bild>
+            <standort>50.513427,138.105555</standort>
+            <hersteller>Ford</hersteller>
+            <rahmenNr>9787</rahmenNr>
+            <model>KinderFahrraeder</model>
+            <vergebenAn id="3"/>
+        </fahrrad>
+        <fahrrad id="105" BesitzerID="1" preis="13.0">
+            <bild>http://tempuri.org</bild>
+            <standort>50.513427,138.17855</standort>
+            <hersteller>Ford</hersteller>
+            <rahmenNr>9796797</rahmenNr>
+            <model>Rennraeder</model>
+            <vergebenAn id="3"/>
+            <ausleih>
+                <rueckgabeort>50.513427,138.10765</rueckgabeort>
+                <mietBeginn>2013-6-31T12:00:00</mietBeginn>
+                <mietEnde>2013-7-6T10:50:00</mietEnde>
+            </ausleih>
+        </fahrrad>
+    </fahrraeder>
+</collection>

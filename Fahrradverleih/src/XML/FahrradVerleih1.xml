@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<collection xmlns="http://www.example.org/FahrradVerleih">
+<users>
+    <user id="0">
+      <name>name</name>
+      <vorname>vorname</vorname>
+      <passwort>passwort</passwort>
+      <strasse>strasse</strasse>
+      <hausNr>0</hausNr>
+      <plz>0</plz>
+      <ort>ort</ort>
+    </user>
+  </users>
+  <fahrraeder>
+    <fahrrad BesitzerID="0" id="0" preis="0.0">
+      <bild>http://tempuri.org</bild>
+      <standort>standort</standort>
+      <hersteller>hersteller</hersteller>
+      <rahmenNr>0</rahmenNr>
+      <model>Mountainbike</model>
+      <vergebenAn id="0"/>
+      <ausleih>
+        <rueckgabeort>rueckgabeort</rueckgabeort>
+        <mietBeginn>2001-12-31T12:00:00</mietBeginn>
+        <mietEnde>2001-12-31T12:00:00</mietEnde>
+      </ausleih>
+    </fahrrad>
+  </fahrraeder>
+</collection>
